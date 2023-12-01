@@ -5,16 +5,20 @@ ArtSea is an online platform that showcases a variety of beautiful artworks for 
 **Home Page:**
 Welcoming landing page introducing users to ArtSea.
 Engaging visuals and a brief overview of the platform's offerings.
+
 **Shop Page:**
 Browse a curated collection of diverse artworks.
 Filter and search functionalities for a personalized shopping experience.
 Each artwork includes details such as the artist, price, and a brief description.
+
 **Cart Page:**
 Add artworks to the cart for easy checkout.
 View and edit the contents of the cart before finalizing the purchase.
+
 **Checkout:**
 Secure and user-friendly checkout process.
 Detailed summary of the purchase, including total cost and selected items.
+
 **Backend:**
 MongoDB database used for efficient data storage and retrieval.
 RESTful API endpoints for communication between the frontend and backend.
