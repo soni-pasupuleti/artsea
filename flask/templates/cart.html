@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+      </style>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Cedarville Cursive', cursive;
+        
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-left: 15%;
+            margin-right:15%;
+        }
+        .card{
+            flex: 1;
+            border-radius: 5px;
+            box-shadow: 1px 3px 18px rgba(0,0,0,0.2);
+            background-color: #f0f2f5;
+            margin: 5%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .left{
+            background-color: none;
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right{
+            margin: 1%;
+            flex:1;
+            border-radius: 5px;
+            background-color: #6a5638;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+        }
+        .total{
+            background-color: white;
+            box-shadow: none;
+        }
+        header{
+            backdrop-filter: blur(3px);
+            background-color: #a69648bd;
+            top: 0;
+            position: sticky;
+            z-index: 999;
+            height:18vh;
+            overflow: hidden;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+        }
+        .l{            
+            flex: 1;
+            margin-left: 5%;
+        }
+        .r{
+            margin-top: 1%;
+            flex:10;
+            display: flex;
+            flex-direction: row-reverse;
+            height: 90%;
+        }
+        nav .r .tag{
+            padding: 12px;
+            margin: 2%;
+            text-align: center;
+            background-color: #6a5638;
+            border-radius: 5px;
+            transition: all 0.2s ease-out;
+        }
+        nav .tag a{
+            font-family: 'Space Grotesk', sans-serif;
+            text-decoration: none;
+            color:#d6cbb7
+        }
+        nav .tag:hover{
+            cursor: pointer;
+            box-shadow: 1px 3px 18px rgba(0,0,0,0.3);
+            transform: none;
+        }
+        nav .tag:hover a{
+            color: white;
+        }
+        .l2{
+            transition: all 0.2s ease-in-out;
+        }
+        .l2:hover{
+            cursor: pointer;
+            transform: scale(1.1)
+        }
+        .l1{
+            background-color: #C2DEDC;
+            color: black;
+        }
+        h1{
+            transition: all 0.2s ease-in-out;
+        }
+        h1:hover{
+            text-decoration: underline green;
+        }
+        .rem{
+            background-color: rgb(245, 81, 81);
+            border-radius: 5px;
+            box-shadow: 1px 3px 18px rgba(0,0,0,0.2);
+            margin: 1.5%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .set{
+            margin: 2%;
+        }
+        .total .right{
+            background-color: white;
+            box-shadow: none;
+        }
+        .total .right .btn{
+            padding: 10px;
+            margin: 1%;
+            background-color: #025464;
+            border-radius: 4px;
+            box-shadow: 1px 3px 18px rgba(0,0,0,0.2);
+            transition: all 0.2s ease-in-out;
+        }
+        .total .right .btn:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .rem{
+            transition: all 0.2s ease-in-out;
+        }
+        .rem:hover{
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+        #remi:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="l"><img src="static/logo.png" width="100px" alt=""></div>
+            <div class="r">
+            <div class="tag"><a href="#">Cart</a></div>
+            <div class="tag"><a href="/shop">Shop</a></div>
+            <div class="tag"><a href="/">Home</a></div>
+        </div>
+        </nav>
+    </header>
+        <h1 align="center">Your Cart</h1>
+    <div class="container">
+        {% for document in data %}
+        <div class="card">
+            <div class="left">
+                <div class="set">
+                    <img width="220px" src="{{document.image}}" alt="Other">
+                    <h4 align="center">Cost: {{ document.cost }}/-</h4>
+                </div>
+            </div>
+            <div class="right">
+                <div class="about">
+                    <h2>{{ document.heading }}</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, pariatur. Dicta velit natus sit ea aut commodi maxime tempora, libero voluptatibus provident! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt</p>
+                    <div class="rem">
+                        <form action="/dele" method="post">
+                        <input type="hidden" value="{{document.cost}}" name="cost">
+                        <b><input id="remi" style="font-size:large;background-color:  rgb(245, 81, 81);border-collapse: collapse;border: 0px;"  type="submit" value="Remove From Cart"></b>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="card total">
+            <div class="left"><h2>Thank You. Visit Again</h2></div>
+            <div class="right">
+                <div class="btn">
+                   <a style="text-decoration: none;color: white;" href="/final">Pay {{ sum }}/-</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

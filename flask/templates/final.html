@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Your Orders</h1>
+    {% for doc in d %}
+    <li>{{doc.heading}} - {{doc.cost}}</li>
+    {% endfor %}
+    <h3 align="center">Total paid : {{sum}}/-</h3>
+    <h4 align="center">Thank You</h4>
+    <a href="/"> Go back to Home</a>
+</body>
+</html>

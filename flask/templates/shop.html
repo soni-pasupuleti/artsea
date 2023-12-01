@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+      </style>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Cedarville Cursive', cursive;
+        
+        }
+        .out{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card{
+            overflow: hidden;
+            margin: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+            background-color: #f0f2f5;
+            box-shadow: 1px 3px 18px rgb(0,0,0,0.3);
+            border-radius: 1px;
+            transition: all 0.2s ease-in-out;
+            height: 80vh;
+            width:50vh;
+            border-radius: 5px;
+        }
+        .hide{
+            display: none;
+            transition: all 0.2s ease-in-out;
+            margin-top: -85%;
+            border-radius: 5px;
+            background-color: #F0CAA3;
+            height: 40px;
+        }
+        .card:hover{
+            box-shadow: 1px 3px 18px rgb(0,0,0,0.4);
+
+        }
+        .card:hover > .hide{
+            transform: scale(1.1);
+            filter: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:black;
+        }
+        img{
+            transition: all 0.2s ease-in-out;
+        }
+        .card:hover > img{
+            transform: scale(1.1);
+            border-radius: 10px;
+        }
+        .hide:hover{
+            margin-left: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .temp{
+            display: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .card:hover > .temp{
+            padding: 5px;
+            display: block;
+            height: 40vh;
+            backdrop-filter: blur(2px);
+            color: white;
+        }
+        .rate{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .li{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:1%;
+            margin-left: 4%;
+            margin-right: 4%;
+            padding: 2px;
+            border-radius: 5px;
+            background-color: #C07F00;
+        }
+        header{
+            backdrop-filter: blur(3px);
+            background-color: #a69648bd;
+            top: 0;
+            position: sticky;
+            z-index: 999;
+            height:18vh;
+            overflow: hidden;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+        }
+        .l{            
+            flex: 1;
+            margin-left: 5%;
+        }
+        .r{
+            margin-top: 1%;
+            flex:10;
+            display: flex;
+            flex-direction: row-reverse;
+            height: 90%;
+        }
+        nav .r .tag{
+            padding: 12px;
+            margin: 2%;
+            text-align: center;
+            background-color: #6a5638;
+            border-radius: 5px;
+            transition: all 0.2s ease-out;
+        }
+        nav .tag a{
+            font-family: 'Space Grotesk', sans-serif;
+            text-decoration: none;
+            color:#d6cbb7
+        }
+        nav .tag:hover{
+            cursor: pointer;
+            box-shadow: 1px 3px 18px rgba(0,0,0,0.3);
+            transform: none;
+        }
+        nav .tag:hover a{
+            color: white;
+        }
+        .l2{
+            transition: all 0.2s ease-in-out;
+        }
+        .l2:hover{
+            cursor: pointer;
+            transform: scale(1.1)
+        }
+        .l1{
+            background-color: #C2DEDC;
+            color: black;
+        }
+        h1{
+            transition: all 0.2s ease-in-out;
+        }
+        h1:hover{
+            text-decoration: underline green;
+        }
+        .buy:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="l"><img src="static/logo.png" width="100px" alt=""></div>
+            <div class="r">
+            <div class="tag"><a href="/cart">Cart</a></div>
+            <div class="tag"><a href="">Shop</a></div>
+            <div class="tag"><a href="/">Home</a></div>
+        </div>
+        </nav>
+    </header>
+        <h1 align="center">Shop Now</h1>
+        <div class="out">
+    <div class="container">
+        <div class="card card1">
+            <img src="static/img14.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Picasso</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+                <div class="rate">
+                    <div class="li l1">1,20,300/-</div>
+                    <div class="li l2"><form action="add" method="post" name="form1">
+                        <input type="hidden" value="Picasso" name="head">
+                        <input type="hidden" value="static/img14.jpg" name="img">
+                        <input type="hidden" value="120300" name="cost">
+                        <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                    </form></div>
+                </div>
+            </div>
+        </div>
+        <div class="card card2">
+            <img src="static/img15.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Vincent van Gogh</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">50,300/-</div>
+                <div class="li l2"><form action="add" method="post" name="form2">
+                    <input type="hidden" value="Vincent van Gogh" name="head">
+                    <input type="hidden" value="static/img15.jpg" name="img">
+                    <input type="hidden" value="50300" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+            </div>
+        </div>
+        <div class="card card3">
+            <img src="static/img16.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Pablo</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">66,000/-</div>
+                <div class="li l2">
+                    <form action="add" method="post">
+                        <input type="hidden" value="Pablo" name="head">
+                        <input type="hidden" value="static/img16.jpg" name="img">
+                        <input type="hidden" value="66000" name="cost">
+                        <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="card card4">
+            <img src="static/img16.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Vincent van Gogh</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">1,50,300/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Vincent van Gogh" name="head">
+                    <input type="hidden" value="static/img16.jpg" name="img">
+                    <input type="hidden" value="150300" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+        </div>
+        <div class="card card5">
+            <img src="static/img14.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Picasso</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">23,000/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Picasso" name="head">
+                    <input type="hidden" value="static/img14.jpg" name="img">
+                    <input type="hidden" value="23000" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+        </div>
+        <div class="card card6">
+            <img src="static/img15.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Vincent van Gogh</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">9300/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Vincent van Gogh" name="head">
+                    <input type="hidden" value="static/img15.jpg" name="img">
+                    <input type="hidden" value="9300" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+        </div>
+        <div class="card card7">
+            <img src="static/img15.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Picasso</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">99,900/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Picasso" name="head">
+                    <input type="hidden" value="static/img15.jpg" name="img">
+                    <input type="hidden" value="99900" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+        </div>
+        <div class="card card8">
+            <img src="static/img16.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Leonardo da Vinci</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">1,20,300/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Leonardo da Vinci" name="head">
+                    <input type="hidden" value="static/img16.jpg" name="img">
+                    <input type="hidden" value="120300" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+        </div>
+        <div class="card card9">
+            <img src="static/img15.jpg" style="width:100%;height: 100%;" alt="">
+            <div class="hide"><h2 align="center">Pablo</h2></div>
+            <div class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto fuga suscipit facere praesentium sed error, totam tempore unde? Error, id?
+            <div class="rate">
+                <div class="li l1">1,20,300/-</div>
+                <div class="li l2"><form action="add" method="post">
+                    <input type="hidden" value="Pablo" name="head">
+                    <input type="hidden" value="static/img15.jpg" name="img">
+                    <input type="hidden" value="120300" name="cost">
+                    <input type="submit" class="buy" value="Buy Now" style="background-color: #C07F00;border:0px;border-collapse: collapse;">
+                </form></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
