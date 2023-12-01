@@ -27,9 +27,9 @@ RESTful API endpoints for communication between the frontend and backend.
 
 ![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/721bae1c-3af6-472d-86fe-aa4c020acecd)
 
-![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/00895b59-27dd-4991-9b27-188e6e12b82b)
-
 ![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/0b0fb689-7b3d-4aa1-b2fd-f01691508c02)
+
+![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/00895b59-27dd-4991-9b27-188e6e12b82b)
 
 ![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/bcb35842-82f6-4a22-ad60-b1873c269736)
 
