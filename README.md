@@ -21,7 +21,6 @@ Detailed summary of the purchase, including total cost and selected items.
 
 **Backend:**
 MongoDB database used for efficient data storage and retrieval.
-RESTful API endpoints for communication between the frontend and backend.
 
 ![image](https://github.com/soni-pasupuleti/artsea/assets/131327903/9f114296-72fb-40aa-921f-8165b2e2cb84)
 
